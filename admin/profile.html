@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../fa-icons/css/font-awesome.min.css">
+</head>
+<body>
+	
+<header>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+		<div class="container">
+      <!-- Brand -->
+      <a class="navbar-brand" href="./index.html">Home</a>
+
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav text-center">
+          
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"> 
+              <span class="fa fa-graduation-cap text-danger"></span>  Student 
+            </a>
+            <div class="dropdown-menu">           
+              <a class="dropdown-item" href="./add-student.html">Add Student <span class="fa fa-plus-circle text-info"></span></a>
+              <a class="dropdown-item" href="./view-student.html">View Student <span class="fa fa-eye text-info"></span></a>
+            </div>
+          </li>
+
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            |  <span class="fa fa-pencil-square-o text-danger"></span> Faculty 
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="./add-faculty.html">Add Faculty <span class="fa fa-plus-circle text-info"></span></a>
+              <a class="dropdown-item" href="./view-faculty.html">View Faculty <span class="fa fa-eye text-info"></span></a>
+            </div>
+          </li>
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">|   
+              <span class="fa fa-book text-danger"></span> Exam  
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="./add-exam.html">Add Exam <span class="fa fa-plus-circle text-info"></span></a>
+              <a class="dropdown-item" href="./view-exam.html">View Exams <span class="fa fa-eye text-info"></span></a>        
+            </div>
+          </li>
+        
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            |  <span class="fa fa-users text-danger"></span> Attendence
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="./clear-attendence.html">Clear Attendence <span class="fa fa-plus-circle text-info"></a>
+              <a class="dropdown-item" href="./shortage-attendence.html">Shortage Attendence <span class="fa fa-plus-circle text-info"></span></a>            
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="./university-exam.html">
+              | <span class="fa fa-university text-danger"></span>University Exam</a>
+          </li>
+
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            |  <span class="fa fa-gear text-danger"></span> Setting
+            </a>
+            <div class="dropdown-menu">
+            <a class="dropdown-item" href="./profile.html">Profile <span class="fa fa fa-user text-info"></a>
+              <a class="dropdown-item" href="./shortage-attendence.html">Logout <span class="fa fa-sign-out text-info"></span></a> <!-- // when clicked on logout, kill the session and redirect to home page --> 
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div> <!-- // container -->
+  </nav> 
+</header>
+
+<br><br><br>
+
+<section class="container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">
+        Admin Dashboard / Profile
+      </li>
+    </ol>
+  </nav>
+</section>
+
+<section class="container">
+  <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myModal">
+    Add New Admin
+  </button>
+  <br><br>
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Add Admin</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form>
+            <label> Name:*</label>
+            <input type="text" name="name" placeholder="Name" class="form-control"><br>
+            <label> Email:*</label>
+            <input type="text" name="email" placeholder="Email" class="form-control"><br>
+            <label>Password:*</label>
+            <input type="password" name="password" placeholder="Password" class="form-control"><br>
+            <input type="submit" name="login-as-admin" value="Save Now" class="btn btn-info">
+            <!-- redirect to admin folder index.html when login success -->
+          </form>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-5 border p-2 text-center">
+      <h4 class="text-danger">All Admins</h4>
+      <table class="table table-sm table-bordered table-striped table-hover">
+        <tr>
+          <th>Sl no</th>
+          <th>Name</th>
+          <th>Action</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Mr Xyz</td>
+          <td><button class="btn btn-danger">Delete <span class="fa fa-trash"></span></button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-5 border p-2 text-center">
+      <h4 class="text-primary">My Details</h4> 
+      <form>
+        <table class="table table-sm table-hover table-bordered">
+          <tr>
+            <th>Name</th>
+            <td>Mr XYZ</td>
+          </tr>
+          <tr>
+            <th>Email</td>
+            <td><input type="email" name="" class="form-control" placeholder="Admins email"></td>
+          </tr>
+          <tr>
+          <th>Password</td>
+            <td><input type="password" name="" class="form-control" placeholder="Admins pw"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><input type="submit" name="" value="save changes" class="btn btn-primary"></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </div><!-- /// row -->
+</section>
+
+<br><br><br><br><br>
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-6">
+        <p>Copyrights reserved <i class="fa fa-copyright" aria-hidden="true"></i> 2020 </p>
+      </div>
+      <div class="col-md-3">
+      </div>
+    </div>
+  </div>	
+</footer>
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title><%= pageTitle %></title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../fa-icons/css/font-awesome.min.css">
+</head>
+<body>
+  
+<header>
+ <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+    <div class="container">
+      <!-- Brand -->
+      <a class="navbar-brand" href="./index.html">Home</a>
+
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav text-center">
+
+          <li class="nav-item">
+            <a class="nav-link" href="./ia-marks.html">|
+             <span class="fa fa-university text-danger"></span>IA Marks
+            </a>
+          </li>
+          
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            |  <span class="fa fa-users text-danger"></span> Attendence
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="./clear-attendence.html">Clear Attendence <span class="fa fa-plus-circle text-info"></a>
+              <a class="dropdown-item" href="./shortage-attendence.html">Shortage Attendence <span class="fa fa-plus-circle text-info"></span></a>
+            </div>
+          </li>
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            |  <span class="fa fa-gear text-danger"></span> Setting
+            </a>
+            <div class="dropdown-menu">
+            <a class="dropdown-item" href="./profile.html">Profile <span class="fa fa fa-user text-info"></a>
+              <a class="dropdown-item" href="./shortage-attendence.html">Logout <span class="fa fa-sign-out text-info"></span></a> <!-- // when clicked on logout, kill the session and redirect to home page -->
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div> <!-- // container -->
+  </nav> 
+</header>
+
+<br><br><br>
+
+<section class="container">
+  <h4>Student Dashboard</h4>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">
+          Student Dashboard / Home
+        </li>
+      </ol>
+    </nav>
+</section>
+
+<br><br>
+
+<section class="container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 border p-2">
+        <h4>Scheduled Exams </h4> <!-- // show their semester only List Ex. CS branch 2nd Sem -->
+        <table class="table table-bordered table-sm text-center">
+          <tr>
+            <th>Sl No</th>
+            <th>Date</th>
+            <th>Time Slot</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>03/03/2020</td>
+            <td>1. 9AM - 12PM</td>
+          </tr>
+        </table> 
+        <br>
+      </div>
+      <div class="col-md-6 border p-2">
+        <h4>Generated Seat Plans</h4>
+        <!--   <p>Display all the generated plans where students sem is included. Example student is of 2nd Sem so Display all seat plans generated for 2nd sem</p> -->
+        <table class="table table-bordered table-sm text-center text-center table-striped">
+          <tr>
+            <th>Sl No</th>
+            <th>Date</th>
+            <th>Slot</th>
+            <th>Action</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>03/03/2020</td>
+            <td>9AM- 12PM</td>
+            <td>
+              <button class="btn btn-info btn-sm">Download<i class="fa fa-cloud-download"></i></button>
+            </td>
+          </tr>
+        </table> 
+      </div>
+    </div>
+    <br><hr>
+    <div class="row">
+      <div class="col-md-6">
+        <h4>University Exam Schedules</h4>
+        <table class="table table-bordered table-striped table-hover table-sm text-center">
+          <tr>
+            <th>Sl No</th>
+            <th>Title</th>
+            <th>Action</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Finals For CSE</td>
+            <td>
+                <button class="btn btn-warning">Download <i class="fa fa-cloud-download"></i> </button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br><br><br>
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-6">
+        <p>Copyrights reserved <i class="fa fa-copyright" aria-hidden="true"></i> 2020 </p>
+      </div>
+      <div class="col-md-3">
+      </div>
+    </div>
+  </div>	
+</footer>
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
