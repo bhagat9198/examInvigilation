@@ -115,14 +115,14 @@
         </div>
         <!-- Modal body -->
         <div class="modal-body">
-          <form>
+          <form id="addAdmin">
             <label> Name:*</label>
-            <input type="text" name="name" placeholder="Name" class="form-control"><br>
+            <input type="text" name="name" id="name" placeholder="Name" class="form-control"><br>
             <label> Email:*</label>
-            <input type="text" name="email" placeholder="Email" class="form-control"><br>
+            <input type="text" name="email" id="email" placeholder="Email" class="form-control"><br>
             <label>Password:*</label>
-            <input type="password" name="password" placeholder="Password" class="form-control"><br>
-            <input type="submit" name="login-as-admin" value="Save Now" class="btn btn-info">
+            <input type="password" name="password" id="password" placeholder="Password" class="form-control"><br>
+            <input type="submit" name="login-as-admin" id="submit" value="Save Now" class="btn btn-info">
             <!-- redirect to admin folder index.html when login success -->
           </form>
         </div>
@@ -196,5 +196,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase.js"></script>
+<script src="../private/api.js"></script>
+<script src="./profile.js"></script>
 </body>
 </html>

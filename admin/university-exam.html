@@ -106,17 +106,18 @@
       <div class="col-md-6">
         <div class="border" style="padding:10px;">
           <p>Add University Schedule</p>
-          <form>
+          <form id="universityExam">
             <label>Title:</label>
-            <input type="text" name="name" placeholder="Please Enter Title" class="form-control">
+            <input type="text" name="title" id="title" placeholder="Please Enter Title" class="form-control">
             <br>
             <label>Upload File:</label>
-            <input type="file" name="file" class="form-control">
+            <input type="file" name="file" id="fileSubmit" class="form-control">
             <br>
-            <input type="submit" name="" value="Add Now" class="btn btn-primary">
+            <input type="submit" name="submit" id="submit" value="Add Now" class="btn btn-primary">
           </form>
         </div> <!-- // form order -->
       </div>
+      
       <div class="col-md-6 border">
         <br>
         <h4>All Schedules</h4>
@@ -157,5 +158,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase.js"></script>
+<script src="../private/api.js"></script>
+<script src="./university-exam.js"></script>
 </body>
 </html>

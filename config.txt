@@ -1,0 +1,23 @@
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBH82wYi7nuj4MPKLHSKCZkx6T3CRftw1U",
+    authDomain: "automated-examination.firebaseapp.com",
+    databaseURL: "https://automated-examination.firebaseio.com",
+    projectId: "automated-examination",
+    storageBucket: "automated-examination.appspot.com",
+    messagingSenderId: "419028472075",
+    appId: "1:419028472075:web:01b9ae17295280e6e0520e",
+    measurementId: "G-Y480D2E3S5"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>

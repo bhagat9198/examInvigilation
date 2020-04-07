@@ -105,9 +105,9 @@
     <div class="col-md-6">
         <div class="border" style="padding:10px;">
           <p>Add Attendence</p>
-          <form>
+          <form id="shortageAttendence">
             <label>Choose Branch:</label>
-            <select class="form-control text-center" name="branch" >
+            <select class="form-control text-center" name="branch" id="branch">
               <option selected="" disabled="">-- Choose Branch --</option>
               <option value="CSE">CSE</option>
               <option value="ISE">ISE</option>
@@ -115,7 +115,7 @@
               <option value="EEE">EEE</option>
             </select>
             <label>Choose Semester:</label>
-            <select class="form-control text-center" name="branch" >
+            <select class="form-control text-center" name="branch" id="semester">
               <option selected="" disabled="">-- Choose Semester --</option>
               <option value="2">2</option>
               <option value="4">4</option>
@@ -124,9 +124,9 @@
             </select>
             <br>
             <label>Upload File:</label>
-            <input type="file" name="file" class="form-control">
+            <input type="file" name="fileSubmit" class="form-control" id="fileSubmit">
             <br>
-            <input type="submit" name="" value="Add Now" class="btn btn-primary">
+            <input type="submit" name="submit" value="Add Now" class="btn btn-primary" id="submit">
           </form>
         </div> <!-- // form order -->
       </div>
@@ -172,5 +172,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase.js"></script>
+<script src="../private/api.js"></script>
+<script src="./shortage-attendence.js"></script>
 </body>
 </html>

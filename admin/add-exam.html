@@ -112,11 +112,11 @@
     <div class="row">
       <div class="col-md-6 border">
         <h3>Add a new Exam </h3>
-        <form>
+        <form id="addExam">
           <label>Exam Title</label>
-          <input type="text" name="" class="form-control" placeholder="Please enter title . Ex. Java Exam 6th Sem CS">
+          <input type="text" name="title" id="title" class="form-control" placeholder="Please enter title . Ex. Java Exam 6th Sem CS">
           <label>Branch</label>
-          <select class="form-control text-center">
+          <select class="form-control text-center" id="branch">
             <option selected="" disabled="">-- Select Branch --</option>
             <option value="ISE">ISE</option>
             <option value="CSE">CSE</option>
@@ -124,7 +124,7 @@
             <option value="ECE">ECE</option>
           </select>
           <label>Choose Semester</label>
-          <select class="form-control text-center">
+          <select class="form-control text-center" id="semester">
             <option>-- Choose Semester --</option>
             <option value="2">2</option>
             <option value="4">4</option>
@@ -132,15 +132,15 @@
             <option value="8">8</option>
           </select>
           <label>Choose Date</label>
-          <input type="date" name="" class="form-control">
+          <input type="date" name="" class="form-control" id="examDate">
           <label>Choose Time slot</label>
-          <select class="form-control text-center">
+          <select class="form-control text-center" id="examTime">
             <option selected="" disabled="">-- Time Slot --</option>
             <option value="1">1- 9:30AM - 12:30 PM</option>
             <option value="1">2- 2:00PM - 05:00 PM</option>
           </select>
           <br>
-          <input type="submit" name="submit" value="Save Now" class="btn btn-primary">
+          <input type="submit" name="submit" id="submit" value="Save Now" class="btn btn-primary">
         </form>
         <br>
       </div>
@@ -192,6 +192,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase.js"></script>
+<script src="../private/api.js"></script>
+<script src="./add-exam.js"></script>
 </body>
 </html>
 
