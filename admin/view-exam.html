@@ -12,7 +12,7 @@
   <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
 		<div class="container">
       <!-- Brand -->
-      <a class="navbar-brand" href="./index.html">Home</a>
+      <a class="navbar-brand" href="./home.html">Home</a>
 
       <!-- Toggler/collapsibe Button -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -115,53 +115,16 @@
                 <th>File</th>   
               </tr>
             </thead>
-            <tbody>
-              <tr>
+            <tbody id="tableBody">
+              <!-- <tr>
                 <td>1</td>
                 <td>Title goes here</td>
                 <td>
                   <button class="btn btn-info">Download <span class="fa fa-cloud-download"></span></button>
                 </td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal -->
-    <div id="myModal" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header text-left">         
-            <h4 class="modal-title text-left">Edit Student Details</h4>
-          </div>
-          <div class="modal-body">
-            <label>Name:</label>
-            <input type="text" name="" placeholder="Please Enter Name" class="form-control">
-            <label>Email:</label>
-            <input type="email" name="" placeholder="Please Enter email" class="form-control">
-            <label>Sem:</label>
-            <select class="form-control">
-              <option value="2">2</option>
-              <option value="4">4</option>
-              <option value="6">6</option>
-              <option value="8">8</option>
-            </select>
-            <label>Branch:</label>
-            <select class="form-control">
-              <option value="ISE">ISE</option>
-              <option value="CSE">CSE</option>
-              <option value="ECE">ECE</option>
-              <option value="EEE">EEE</option>
-            </select>
-            <label>USN:</label>
-            <input class="form-control" type="text" name="" placeholder="Enter new USN">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-          </div>
         </div>
       </div>
     </div>
@@ -188,5 +151,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase.js"></script>
+<script src="../private/api.js"></script>
+<script src="./view-exam.js"></script>
 </body>
 </html>

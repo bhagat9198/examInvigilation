@@ -12,7 +12,7 @@
   <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
 		<div class="container">
       <!-- Brand -->
-      <a class="navbar-brand" href="./index.html">Home</a>
+      <a class="navbar-brand" href="./home.html">Home</a>
 
       <!-- Toggler/collapsibe Button -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -123,7 +123,7 @@
             <label>Password:*</label>
             <input type="password" name="password" id="password" placeholder="Password" class="form-control"><br>
             <input type="submit" name="login-as-admin" id="submit" value="Save Now" class="btn btn-info">
-            <!-- redirect to admin folder index.html when login success -->
+            <!-- redirect to admin folder home.html when login success -->
           </form>
         </div>
         <!-- Modal footer -->
@@ -137,16 +137,20 @@
     <div class="col-md-5 border p-2 text-center">
       <h4 class="text-danger">All Admins</h4>
       <table class="table table-sm table-bordered table-striped table-hover">
-        <tr>
-          <th>Sl no</th>
-          <th>Name</th>
-          <th>Action</th>
-        </tr>
-        <tr>
+        <thead>
+          <tr>
+            <th>Sl no</th>
+            <th>Name</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- <tr>
           <td>1</td>
           <td>Mr Xyz</td>
           <td><button class="btn btn-danger">Delete <span class="fa fa-trash"></span></button></td>
-        </tr>
+        </tr> -->
+        </tbody>
       </table>
     </div>
     <div class="col-md-2"></div>
