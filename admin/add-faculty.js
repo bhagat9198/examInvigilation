@@ -1,3 +1,4 @@
+
 var addFaculty = document.getElementById('addFaculty');
 
 function submitForm(e) {

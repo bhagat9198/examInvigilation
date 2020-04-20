@@ -1,3 +1,4 @@
+
 // gloval varaiables
 let field1, field2, field3, field4, result, allDataObj;
 

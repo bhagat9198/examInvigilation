@@ -1,3 +1,4 @@
+
 let field1, field2, result, allDataObj;
 
 const allFacultyRef = firebase.database().ref('addFaculty');

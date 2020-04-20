@@ -1,3 +1,4 @@
+
 var clearAttendence =  document.getElementById('clearAttendence');
 var fileSubmit = document.getElementById('fileSubmit');
 var selectedFile;

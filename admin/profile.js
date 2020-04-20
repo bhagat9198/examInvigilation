@@ -1,3 +1,4 @@
+
 const addAdmin = document.getElementById('addAdmin');
 const addAdminRef = firebase.database().ref('addAdim');
 
