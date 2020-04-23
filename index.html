@@ -46,11 +46,12 @@
             </div>
             <!-- Modal body -->
             <div class="modal-body">
-              <form  action="./admin/home.html">
+              <form id="adminLoginForm">
+								<div id="adminAlert">								</div>
                 <label>Username / Email:*</label>
-                <input type="text" name="email" placeholder="Please Enter Email or Username" class="form-control"><br>
+                <input type="text" id="adminLoginEmail" name="email" placeholder="Please Enter Email or Username" class="form-control"><br>
                 <label>Password:*</label>
-                <input type="password" name="password" placeholder="Please Enter Password" class="form-control"><br>
+                <input type="password" id="adminLoginPassword" name="password" placeholder="Please Enter Password" class="form-control"><br>
                 <input type="submit" name="login-as-admin" value="Login Now" class="btn btn-info">
                 <!-- redirect to admin folder home.html when login success -->
               </form>
@@ -75,11 +76,12 @@
             </div>
             <!-- Modal body -->
             <div class="modal-body">
-              <form  action="./faculty/home.html">
+              <form  id="facultyLoginForm" action="./faculty/home.html">
+								<div id="facultyAlert">								</div>
                 <label>Username / Email:*</label>
-                <input type="text" name="email" placeholder="Please Enter Email or Username" class="form-control"><br>
+                <input type="text" id="facultyLoginEmail" name="email" placeholder="Please Enter Email or Username" class="form-control"><br>
                 <label>Password:*</label>
-                <input type="password" name="password" placeholder="Please Enter Password" class="form-control"><br>
+                <input type="password" id="facultyLoginPassword" name="password" placeholder="Please Enter Password" class="form-control"><br>
                 <input type="submit" name="login-as-staff" value="Login Now" class="btn btn-info">
                 <!-- redirect to faculty folder home.html when login success -->
               </form>
@@ -104,11 +106,12 @@
             </div>
             <!-- Modal body -->
             <div class="modal-body">
-              <form action="./student/home.html">
+              <form id="studentLoginForm" action="./student/home.html">
+								<div id="studentAlert">								</div>
                 <label>Username / Email:*</label>
-                <input type="text" name="email" placeholder="Please Enter Email or Username" class="form-control"><br>
+                <input type="text" id="studentLoginEmail" name="email" placeholder="Please Enter Email or Username" class="form-control"><br>
                 <label>Password:*</label>
-                <input type="password" name="password" placeholder="Please Enter Password" class="form-control"><br>
+                <input type="password" id="studentLoginPassword" name="password" placeholder="Please Enter Password" class="form-control"><br>
                 <input type="submit" name="login-as-student" value="Login Now" class="btn btn-info">
                 <!-- redirect to student folder home.html when login success -->
               </form>
@@ -164,6 +167,10 @@
     <script type="text/javascript" src="./js/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+
+		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase.js"></script>
+		<script src="./private/api.js"></script>
+		<script src="./index1.js"></script>
   </div>
 </body>
 </html>

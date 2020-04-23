@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="../fa-icons/css/font-awesome.min.css">
 </head>
 <body>
-	
+
 <header>
   <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
 		<div class="container">
@@ -22,13 +22,13 @@
       <!-- Navbar links -->
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav text-center">
-          
+
           <!-- Dropdown -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"> 
-              <span class="fa fa-graduation-cap text-danger"></span>  Student 
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              <span class="fa fa-graduation-cap text-danger"></span>  Student
             </a>
-            <div class="dropdown-menu">           
+            <div class="dropdown-menu">
               <a class="dropdown-item" href="./add-student.html">Add Student <span class="fa fa-plus-circle text-info"></span></a>
               <a class="dropdown-item" href="./view-student.html">View Student <span class="fa fa-eye text-info"></span></a>
             </div>
@@ -37,7 +37,7 @@
           <!-- Dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-            |  <span class="fa fa-pencil-square-o text-danger"></span> Faculty 
+            |  <span class="fa fa-pencil-square-o text-danger"></span> Faculty
             </a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="./add-faculty.html">Add Faculty <span class="fa fa-plus-circle text-info"></span></a>
@@ -46,15 +46,15 @@
           </li>
           <!-- Dropdown -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">|   
-              <span class="fa fa-book text-danger"></span> Exam  
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">|
+              <span class="fa fa-book text-danger"></span> Exam
             </a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="./add-exam.html">Add Exam <span class="fa fa-plus-circle text-info"></span></a>
-              <a class="dropdown-item" href="./view-exam.html">View Exams <span class="fa fa-eye text-info"></span></a>        
+              <a class="dropdown-item" href="./view-exam.html">View Exams <span class="fa fa-eye text-info"></span></a>
             </div>
           </li>
-        
+
           <!-- Dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -62,7 +62,7 @@
             </a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="./clear-attendence.html">Clear Attendence <span class="fa fa-plus-circle text-info"></a>
-              <a class="dropdown-item" href="./shortage-attendence.html">Shortage Attendence <span class="fa fa-plus-circle text-info"></span></a>            
+              <a class="dropdown-item" href="./shortage-attendence.html">Shortage Attendence <span class="fa fa-plus-circle text-info"></span></a>
             </div>
           </li>
 
@@ -78,13 +78,14 @@
             </a>
             <div class="dropdown-menu">
             <a class="dropdown-item" href="./profile.html">Profile <span class="fa fa fa-user text-info"></a>
-              <a class="dropdown-item" href="./shortage-attendence.html">Logout <span class="fa fa-sign-out text-info"></span></a> <!-- // when clicked on logout, kill the session and redirect to home page --> 
+							<a class="dropdown-item" id="adminLogout" href="../index.html">Logout <span class="fa fa-sign-out text-info"></span></a>
+
             </div>
           </li>
         </ul>
       </div>
     </div> <!-- // container -->
-  </nav> 
+  </nav>
 </header>
 
 <br><br><br>
@@ -108,6 +109,7 @@
         <div class="border" style="padding:10px;">
           <p>Add Faculty</p>
           <form id="addFaculty">
+						<div id="alert">						</div>
             <label>Name:</label>
             <input type="text" name="name"  id="name" placeholder="Please Enter faculty Name" class="form-control">
             <label>Email:</label>
@@ -138,7 +140,7 @@
       <div class="col-md-3">
       </div>
     </div>
-  </div>	
+  </div>
 </footer>
 
 <script type="text/javascript" src="../js/jquery.js"></script>
@@ -147,7 +149,8 @@
 
 <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase.js"></script>
 <script src="../private/api.js"></script>
-<script src="./add-faculty.js"></script>
+<script type="text/javascript" src="./add-faculty1.js">
+
+</script>
 </body>
 </html>
-

@@ -78,7 +78,8 @@
             </a>
             <div class="dropdown-menu">
             <a class="dropdown-item" href="./profile.html">Profile <span class="fa fa fa-user text-info"></a>
-              <a class="dropdown-item" href="./shortage-attendence.html">Logout <span class="fa fa-sign-out text-info"></span></a> <!-- // when clicked on logout, kill the session and redirect to home page -->
+							<a class="dropdown-item" id="adminLogout" href="../index.html">Logout <span class="fa fa-sign-out text-info"></span></a>
+
             </div>
           </li>
         </ul>
@@ -136,16 +137,16 @@
           <label>Choose Time slot</label>
           <select class="form-control text-center" id="examTime">
             <option selected="" disabled="">-- Time Slot --</option>
-            <option value="1">1- 9:30AM - 12:30 PM</option>
-            <option value="1">2- 2:00PM - 05:00 PM</option>
+            <option value="Batch1- 9:30AM - 12:30 PM">1- 9:30AM - 12:30 PM</option>
+            <option value="Batch2- 2:00PM - 05:00 PM">2- 2:00PM - 05:00 PM</option>
           </select>
           <br>
-          <input type="" name="uploadDetails" id="uploadDetails" value="Generate Pdf" class="btn btn-primary">
+          <input type="submit" name="uploadDetails" id="uploadDetails" value="Generate Pdf" class="btn btn-primary">
 					<br><br>
 					<label>Upload File:</label>
 					<input type="file" name="fileSubmit" class="form-control" id="fileSubmit">
 					<br>
-					<input type="" name="submit" value="Add Now" class="btn btn-success" id="addExam">
+					<input type="submit" name="submit" value="Add Now" class="btn btn-success" id="addExam">
 
         <br>
       </div>
@@ -153,24 +154,28 @@
         <h2>Scheduled Exams</h2>
         <p>Display all the upcoming exam</p>
         <table class="table table-bordered">
-          <tr>
-            <th>Sl No</th>
-            <th>Title of Exam</th>
-            <th>branch</th>
-            <th>sem</th>
-            <th>Timing Slot</th>
-            <th>Action</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Java 6th Sem</td>
-            <td>CSE</td>
-            <td>6</td>
-            <td>1. 9:30 AM to 12:30PM</td>
-            <td>
-              <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-            </td>
-          </tr>
+					<thead>
+						<tr>
+	            <th>Sl No</th>
+	            <th>Title of Exam</th>
+	            <th>branch</th>
+	            <th>sem</th>
+	            <th>Timing Slot</th>
+	            <th>Action</th>
+	          </tr>
+					</thead>
+					<tbody id="tableBody">
+						<!-- <tr>
+							<td>1</td>
+							<td>Java 6th Sem</td>
+							<td>CSE</td>
+							<td>6</td>
+							<td>1. 9:30 AM to 12:30PM</td>
+							<td>
+								<button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+							</td>
+						</tr> -->
+					</tbody>
         </table>
       </div>
     </div>
@@ -201,6 +206,6 @@
 <script src="../private/api.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.62/pdfmake.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.62/vfs_fonts.js"></script>
-<script src="./add-exam.js"></script>
+<script src="./add-exam1.js"></script>
 </body>
 </html>

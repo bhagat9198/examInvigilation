@@ -4,8 +4,8 @@ background-size:cover; background-attachment:fixed; } /* .layer{
 background:rgba(0,0,0,0.65); background-size:cover; }*/ #notice{
 background-image:url('../img/bg-notice.png');
  background-repeat:no-repeat;
-background-size:cover; padding:20px 30px; 
-} 
+background-size:cover; padding:20px 30px;
+}
 #footer{ background:#000;
 padding:5px 0px 2px 0px;
  color:#fff;
@@ -13,6 +13,7 @@ padding:5px 0px 2px 0px;
  bottom:0px;
  width:100%;
  text-align: center;
+ 
   }
   #navbar-sticky{
   	position: sticky;
@@ -21,7 +22,7 @@ padding:5px 0px 2px 0px;
  .card-add{
  	border-radius:20px;
  	padding:10px 0px;
- 	
+
  }
  .card-add:hover
  {
@@ -84,4 +85,3 @@ padding:5px 0px 2px 0px;
  	color:#dc3545;
  	transition:0.9s;
  }
-

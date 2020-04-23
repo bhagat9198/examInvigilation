@@ -2,13 +2,13 @@
 <html>
 <head>
 
-  <title><%= pageTitle %></title>
+  <title>Home</title>
   <link rel="stylesheet" type="text/css" href="../css/style.css">
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../fa-icons/css/font-awesome.min.css">
 </head>
 <body>
-  
+
 <header>
  <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
     <div class="container">
@@ -29,7 +29,7 @@
              <span class="fa fa-university text-danger"></span>IA Marks
             </a>
           </li>
-          
+
           <!-- Dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -47,13 +47,14 @@
             </a>
             <div class="dropdown-menu">
             <a class="dropdown-item" href="./profile.html">Profile <span class="fa fa fa-user text-info"></a>
-              <a class="dropdown-item" href="./shortage-attendence.html">Logout <span class="fa fa-sign-out text-info"></span></a> <!-- // when clicked on logout, kill the session and redirect to home page -->
+              <a class="dropdown-item" id="adminLogout" href="../index.html">Logout <span class="fa fa-sign-out text-info"></span></a>
+              <!-- // when clicked on logout, kill the session and redirect to home page -->
             </div>
           </li>
         </ul>
       </div>
     </div> <!-- // container -->
-  </nav> 
+  </nav>
 </header>
 
 <br><br><br>
@@ -68,29 +69,33 @@
     </ol>
   </nav>
 </section>
-  
+
 <br><br>
-  
+
 <section class="container">
   <div class="container">
     <div class="row">
       <div class="col-md-6 border">
         <h3>Scheduled Exams</h3>
         <table class="table table-bordered table-sm text-center">
-          <tr>
-            <th>Sl No</th>
-            <th>Date</th>
-            <th>Time Slot</th>
-            <th>Faculties Required</th>
-            <th>Action</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>03/03/2020</td>
-            <td>1. 9AM - 12PM</td>
-            <td><span class="badge badge-pill badge-primary">10</span></td><!-- // show no of requirement, if applied redce the count -->
-            <td><button class="btn btn-info">Apply</button></td>
-          </tr>
+          <thead>
+            <tr>
+              <th>Sl No</th>
+              <th>Date</th>
+              <th>Time Slot</th>
+              <th>Faculties Required</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="examTableBody">
+            <!-- <tr>
+              <td>1</td>
+              <td>03/03/2020</td>
+              <td>1. 9AM - 12PM</td>
+              <td><span class="badge badge-pill badge-primary">10</span></td>
+              <td><button class="btn btn-info">Apply</button></td>
+            </tr> -->
+          </tbody>
         </table>
         <br>
       </div>
@@ -112,7 +117,7 @@
               <button class="btn btn-info btn-sm">Download<i class="fa fa-cloud-download"></i></button>
             </td>
           </tr>
-        </table> 
+        </table>
       </div>
     </div>
     <br><hr>
@@ -137,7 +142,7 @@
     </div>
   </div>
 </section>
-  
+
 <br><br><br>
 
 <footer id="footer">
@@ -151,12 +156,15 @@
       <div class="col-md-3">
       </div>
     </div>
-  </div>	
+  </div>
 </footer>
 
 <script type="text/javascript" src="../js/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase.js"></script>
+<script src="../private/api.js"></script>
+<script src="./home1.js"></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="../fa-icons/css/font-awesome.min.css">
 </head>
 <body>
-  
+
 <header>
  <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
     <div class="container">
@@ -29,7 +29,7 @@
              <span class="fa fa-university text-danger"></span>IA Marks
             </a>
           </li>
-          
+
           <!-- Dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -47,13 +47,14 @@
             </a>
             <div class="dropdown-menu">
             <a class="dropdown-item" href="./profile.html">Profile <span class="fa fa fa-user text-info"></a>
-              <a class="dropdown-item" href="./shortage-attendence.html">Logout <span class="fa fa-sign-out text-info"></span></a> <!-- // when clicked on logout, kill the session and redirect to home page -->
+              <a class="dropdown-item" id="adminLogout" href="../index.html">Logout <span class="fa fa-sign-out text-info"></span></a>
+              <!-- // when clicked on logout, kill the session and redirect to home page -->
             </div>
           </li>
         </ul>
       </div>
     </div> <!-- // container -->
-  </nav> 
+  </nav>
 </header>
 
 <br><br><br>
@@ -107,9 +108,16 @@
       <div class="col-md-3">
       </div>
     </div>
-  </div>	
+  </div>
 </footer>
 
 <script type="text/javascript" src="../js/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase.js"></script>
+<script src="../private/api.js"></script>
+<script src="./clear-attendence1.js"></script>
+
+</body>
+</html>
