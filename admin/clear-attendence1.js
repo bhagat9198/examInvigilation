@@ -78,7 +78,7 @@ function deleteFile() {
       //   console.log(k);
       //   console.log(recordId);
       // }
-    }
+    // }
     storageRef.child(field1).delete().then(function() {
       // File deleted successfully
       console.log('File Deleted');

@@ -4,36 +4,32 @@ const auth = firebase.auth();
 // console.log(auth);
 const db = firebase.firestore();
 var currentUser = firebase.auth().currentUser;
-
-const addAdmin = document.querySelector('#addAdmin');
+const updatePassSubmit = document.querySelector('#updatePassSubmit');
+const updateAdminForm = document.querySelector('#updateAdminForm');
 // const updateAdminInfo = document.querySelector('#updateAdminInfo');
 
-const updatePassSubmit = document.querySelector('#updatePassSubmit');
-updatePassSubmit.addEventListener('click', () => {
-  if(currentUser) {
-    var newPassword = document.querySelector('#updatePass').value;
-    currentUser.updatePassword(newPassword).then(function() {
-      // const htmlTxt = `    <p>Successfuly password reset</p>`;
-      // addAdmin.querySelector('#alert').innerHTML = htmlTxt;
-      // addAdmin.querySelector('#alert').style.display = 'block';
-      // addAdmin.querySelector('#alert').style.color = 'green';
-      console.log('updating done');
-      return auth.signOut();
-    }).then(() => {
-      location = '../index.html';
-      console.log('logout done');
-    }).catch(function(err) {
-      const htmlTxt = ` <p>${err.message}</p> `;
-      updateAdminInfo.querySelector('#alert').innerHTML = htmlTxt;
-      updateAdminInfo.querySelector('#alert').style.display = 'block';
-      updateAdminInfo.querySelector('#alert').style.color = 'red';
-    });
-  }
+updateAdminForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const updateAdminPassword = updateAdminForm.querySelector('#updateAdminPassword').value;
+  // console.log(updatePass);
+
+  const cuser = firebase.auth().currentUser;
+  cuser.updatePassword(updateAdminPassword).then(function() {
+    // Update successful.
+    const htmlTxt = `<p>Successfuly password reset</p>`;
+    updateAdminForm.querySelector('#alert').innerHTML = htmlTxt;
+    updateAdminForm.querySelector('#alert').style.display = 'block';
+    updateAdminForm.querySelector('#alert').style.color = 'green';
+    console.log('updating done');
+    
+  }).catch(function(error) {
+    const htmlTxt = ` <p>${error.message}</p> `;
+    updateAdminForm.querySelector('#alert').innerHTML = htmlTxt;
+    updateAdminForm.querySelector('#alert').style.display = 'block';
+    updateAdminForm.querySelector('#alert').style.color = 'red';
+  });
 
 });
-
-
-
 
 // listen for auth status changes
 auth.onAuthStateChanged(user => {
