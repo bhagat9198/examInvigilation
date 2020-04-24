@@ -1,9 +1,17 @@
 const auth = firebase.auth();
+const allStudentRef = firebase.database().ref('addStudent');
+const updatePassSubmit = document.querySelector('#updatePassSubmit');
+const updateForm = document.querySelector('#updateForm');
+let email;
+// console.log('hh');
 
 auth.onAuthStateChanged(user => {
   if(user) {
-    console.log(user);
-
+    // console.log(user);
+    email = user.email;
+    console.log(email);
+    
+    allStudentRef.on('value', data, error);
   } else {
     // console.log(user);
     const html = `
@@ -16,6 +24,52 @@ auth.onAuthStateChanged(user => {
     document.querySelector('body').innerHTML = html;
   }
 });
+
+updateForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const updatePass = updateForm.querySelector('#updatedUserPassword').value;
+  // console.log(updatePass);
+
+  const cuser = firebase.auth().currentUser;
+  cuser.updatePassword(updatePass).then(function() {
+    // Update successful.
+    const htmlTxt = `<p>Successfuly password reset</p>`;
+    document.querySelector('#alert').innerHTML = htmlTxt;
+    document.querySelector('#alert').style.display = 'block';
+    document.querySelector('#alert').style.color = 'green';
+    console.log('updating done');
+    
+  }).catch(function(error) {
+    const htmlTxt = ` <p>${error.message}</p> `;
+    document.querySelector('#alert').innerHTML = htmlTxt;
+    document.querySelector('#alert').style.display = 'block';
+    document.querySelector('#alert').style.color = 'red';
+  });
+});
+
+function data(snapshot) {
+  const allDataObj = snapshot.val();
+
+  var allDataArr = Object.entries(allDataObj);
+
+  for(var i=0; i < allDataArr.length; i++) {
+    let userEmail = allDataArr[i][1].email;
+    console.log(userEmail);
+    
+    if(userEmail === email) {
+      console.log(userEmail);
+      console.log(email);
+      
+      const name = allDataArr[i][1].name;
+      document.querySelector('#currentUserName').innerHTML = `<p>${name}</p>`;
+      document.querySelector('#currentUserEmail').innerHTML = `<p>${email}</p>`;
+    }
+  }
+}
+
+function error(err) {
+  console.log(err);
+}
 
 // logout
 const logout = document.querySelector('#adminLogout');

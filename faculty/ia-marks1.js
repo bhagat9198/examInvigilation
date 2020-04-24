@@ -11,7 +11,7 @@ auth.onAuthStateChanged(user => {
   if(user) {
     // console.log(user);
     fileSubmit.addEventListener('change', uploadFile);
-    displayAttendence()
+    displayIaMarks()
   } else {
     // console.log(user);
     const html = `
@@ -25,7 +25,7 @@ auth.onAuthStateChanged(user => {
   }
 });
 
-function displayAttendence() {
+function displayIaMarks() {
   iaMarksRef.on('value', data, error);
 }
 

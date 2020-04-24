@@ -1,7 +1,7 @@
 const auth = firebase.auth();
 
 var addExamRef = firebase.database().ref('addExam');
-var universityExamRef = firebase.database().ref('universityExam');
+var universityExamRef = firebase.database().ref('universityExam'); 
 const storageService = firebase.storage();
 const storageRef = storageService.ref();
 let result, allDataObj;
