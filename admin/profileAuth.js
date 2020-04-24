@@ -1,4 +1,5 @@
 console.log("Auth file");
+let mainUser;
 
 const auth = firebase.auth();
 // console.log(auth);
@@ -21,7 +22,7 @@ updateAdminForm.addEventListener('submit', function(e) {
     updateAdminForm.querySelector('#alert').style.display = 'block';
     updateAdminForm.querySelector('#alert').style.color = 'green';
     console.log('updating done');
-    
+  
   }).catch(function(error) {
     const htmlTxt = ` <p>${error.message}</p> `;
     updateAdminForm.querySelector('#alert').innerHTML = htmlTxt;
@@ -72,6 +73,7 @@ addAdmin.addEventListener('submit', (e) => {
     addAdmin.querySelector('#alert').style.display = 'block';
     addAdmin.querySelector('#alert').style.color = 'green';
     addAdmin.reset();
+    user = mainUser;
   }).catch(err => {
     const htmlTxt = ` <p>${err.message}</p> `;
     addAdmin.querySelector('#alert').innerHTML = htmlTxt;
