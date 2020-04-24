@@ -1,12 +1,12 @@
 var firebaseConfig = {
-  apiKey: "AIzaSyBH82wYi7nuj4MPKLHSKCZkx6T3CRftw1U",
-  authDomain: "automated-examination.firebaseapp.com",
-  databaseURL: "https://automated-examination.firebaseio.com",
-  projectId: "automated-examination",
-  storageBucket: "automated-examination.appspot.com",
-  messagingSenderId: "419028472075",
-  appId: "1:419028472075:web:01b9ae17295280e6e0520e",
-  measurementId: "G-Y480D2E3S5"
+  apiKey: "AIzaSyD9hy0FW0wGGZ1b3XCUUPznr0byFCMBUNk",
+  authDomain: "easyexamination-78608.firebaseapp.com",
+  databaseURL: "https://easyexamination-78608.firebaseio.com",
+  projectId: "easyexamination-78608",
+  storageBucket: "easyexamination-78608.appspot.com",
+  messagingSenderId: "797759442054",
+  appId: "1:797759442054:web:410cd712c6a4c67c811507",
+  measurementId: "G-6SMD9SD4QD"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
