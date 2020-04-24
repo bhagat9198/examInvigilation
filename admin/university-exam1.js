@@ -2,7 +2,7 @@ const auth = firebase.auth();
 
 var universityExam =  document.getElementById('universityExam');
 var fileSubmit = document.getElementById('fileSubmit');
-var universityExamRef = firebase.database().ref('universityExam');
+var universityExamRef = firebase.database().ref('universityExam'); 
 const storageService = firebase.storage();
 const storageRef = storageService.ref();
 

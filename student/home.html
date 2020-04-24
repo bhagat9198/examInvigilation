@@ -2,7 +2,7 @@
 <html>
 <head>
 
-  <title><%= pageTitle %></title>
+  <title>Home|Student Dashboard</title>
   <link rel="stylesheet" type="text/css" href="../css/style.css">
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../fa-icons/css/font-awesome.min.css">
@@ -83,11 +83,13 @@
             <th>Date</th>
             <th>Time Slot</th>
           </tr>
-          <tr>
-            <td>1</td>
-            <td>03/03/2020</td>
-            <td>1. 9AM - 12PM</td>
-          </tr>
+          <tbody id="examTableBody">
+            <!-- <tr>
+              <td>1</td>
+              <td>03/03/2020</td>
+              <td>1. 9AM - 12PM</td>
+            </tr> -->
+          </tbody>
         </table>
         <br>
       </div>
@@ -122,13 +124,15 @@
             <th>Title</th>
             <th>Action</th>
           </tr>
-          <tr>
-            <td>1</td>
-            <td>Finals For CSE</td>
-            <td>
-                <button class="btn btn-warning">Download <i class="fa fa-cloud-download"></i> </button>
-            </td>
-          </tr>
+          <tbody id="tableBodyUniversity">
+            <tr>
+              <!-- <td>1</td>
+              <td>Finals For CSE</td>
+              <td>
+                  <button class="btn btn-warning">Download <i class="fa fa-cloud-download"></i> </button>
+              </td>
+            </tr> -->
+          </tbody>
         </table>
       </div>
     </div>
