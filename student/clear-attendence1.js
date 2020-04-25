@@ -29,7 +29,7 @@ function displayAttendence() {
 function data(snapshot) {
   // console.log('values are');
   const allDataObj = snapshot.val();
-  // console.log(allDataObj);
+  // console.log(allDataObj); 
   result = Object.keys(allDataObj);
 
   var allDataArr = Object.entries(allDataObj);
