@@ -86,62 +86,52 @@
     </div> <!-- // container -->
   </nav>
 </header>
-  
+
 <br><br><br>
 
-<section class="container">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item active" aria-current="page">
-        Admin Dashboard / Generate Seat Plans
-      </li>
-    </ol>
-  </nav>
-</section>
+<!-- logic code -->
 
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 border">
-        <h3>Generate Seat Plan </h3>
-        <!-- <form id="generatedPlan"> -->
-          <label>Exam Title</label>
-          <input type="text" name="title" id="title" class="form-control" placeholder="Please enter title">
-          <br>
-          <label>Upload File:</label>
-          <input type="file" name="fileSubmit" class="form-control" id="fileSubmit">
-          <br>
-          <input type="submit" id="submitformData" name="submit" value="Add Now" class="btn btn-primary" id="submit">
-        <!-- </form> -->
-        <br>
+<section id="lol">
+  <div class="container" id="tableDisplay">
+    <!-- <div class="card mb-4">
+      <div class="card-body">
+        <div class="table-responsive">
+          <h1 class="text-center">aaaaa</h1>
+					<h2>aaaaa</h2>
+          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+              <tr>
+                <th>ISE</th>
+                <th>CSE</th>
+                <th>EEE</th>
+                <th>ECE</th>
+                <th>CIV</th>
+                <th>ME</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+              <tr>
+                <th>ece student</th>
+                <th>eee student</th>
+                <th>ise student</th>
+                <th>cse student</th>
+                <th>me student</th>
+                <th>civ student</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-
-      <div class="col-md-6 border">
-        <h2>Generated Seat Plans</h2>
-        <p>Display all the generated plans</p>
-        <table class="table table-bordered">
-          <tr>
-            <th>Sl No</th>
-            <th>Title</th>
-            <th>Action</th>
-          </tr>
-          <tbody id="tableBody">
-            <!-- <tr>
-              <td>1</td>
-              <td>03/03/2020</td>
-              <td>
-                <button class="btn btn-info btn-sm">   Download    <i class="fa fa-cloud-download"></i>    </button>
-                <button class="btn btn-danger btn-sm">  <i class="fa fa-trash"></i>  </button>
-              </td>
-            </tr> -->
-          </tbody>
-        </table> 
-      </div>
-    </div>
+    </div> -->
   </div>
 </section>
 
+<a href="https://restpack.io/html2pdf/save-as-pdf?private=true" target="_blank" rel="nofollow">Save this page as PDF</a>
+<script async src="https://restpack.io/save-as-pdf.js"></script>
+
+<button id="gerneratePdf">click here</button>
 <br><br><br>
+
 
 <footer id="footer">
   <div class="container">
@@ -156,14 +146,14 @@
     </div>
   </div>
 </footer>
-  
+
 <script type="text/javascript" src="../js/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 
 <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase.js"></script>
 <script src="../private/api.js"></script>
-<script src="./generate-plans1.js"></script>
+<script src="./generate-plans11.js"></script>
 
 
 </body>
