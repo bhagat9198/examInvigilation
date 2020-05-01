@@ -37,17 +37,22 @@ function data(snapshot) {
   // console.log(allDataArr);
   totalRecords = allDataArr.length;
 
-  $('#tableBody').empty();
-  for(var i=0; i < allDataArr.length; i++) {
-    let branch = allDataArr[i][1].branch;
-    let semester = allDataArr[i][1].semester;
-    let name = allDataArr[i][1].name;
-    let usn = allDataArr[i][1].usn;
-    let uid = allDataArr[i][0];
+  if(allDataArr.length > 0) {
+    $('#tableBody').empty();
+    for(var i=0; i < allDataArr.length; i++) {
+      let branch = allDataArr[i][1].branch;
+      let semester = allDataArr[i][1].semester;
+      let name = allDataArr[i][1].name;
+      let usn = allDataArr[i][1].usn;
+      let uid = allDataArr[i][0];
 
-    $('#tableBody').append(
-      '<tr><td>' + name + '</td>        <td>' + semester + '</td>        <td>' + branch + '</td>        <td>' + usn + '</td>        <td>          <button class="btn btn-danger btn-sm"  onclick="tableValues(); deleteRecord()" >            <i class="fa fa-trash"></i>          </button>          <button class="btn btn-sm btn-info" class="btn btn-info btn-lg" data-toggle="modal" onclick="tableValues()" id="updateBtn"  data-target="#myModal">            <i class="fa fa-wrench"></i>        </button>        </td>     </tr>'
-    );
+      $('#tableBody').append(
+        '<tr><td>' + name + '</td>        <td>' + semester + '</td>        <td>' + branch + '</td>        <td>' + usn + '</td>        <td>          <button class="btn btn-danger btn-sm"  onclick="tableValues(); deleteRecord()" >            <i class="fa fa-trash"></i>          </button>          <button class="btn btn-sm btn-info" class="btn btn-info btn-lg" data-toggle="modal" onclick="tableValues()" id="updateBtn"  data-target="#myModal">            <i class="fa fa-wrench"></i>        </button>        </td>     </tr>'
+      );
+    }
+  } else {
+    $('#tableBody').empty();
+    $('#tableBody').append('<h3 class="text-center">No record Added</h3>');
   }
 }
 

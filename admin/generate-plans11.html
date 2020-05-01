@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Add Exam|Admin Dashboard</title>
+	<title>Generate Plan|Admin Dashboard</title>
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../fa-icons/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../fa-icons/css/font-awesome.min.css">
 </head>
 <body>
-
 <header>
   <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
 		<div class="container">
@@ -90,105 +89,49 @@
 
 <br><br><br>
 
-<section class="container">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item active" aria-current="page">
-        Admin Dashboard / Add Exam
-      </li>
-    </ol>
-  </nav>
-</section>
+<!-- logic code -->
 
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-          <a href="./downloadsheet.html" class="btn btn-info">Generate Seat Plan</a>
+<section id="lol">
+  <div class="container" id="tableDisplay">
+    <!-- <div class="card mb-4">
+      <div class="card-body">
+        <div class="table-responsive">
+          <h1 class="text-center">aaaaa</h1>
+					<h2>aaaaa</h2>
+          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+              <tr>
+                <th>ISE</th>
+                <th>CSE</th>
+                <th>EEE</th>
+                <th>ECE</th>
+                <th>CIV</th>
+                <th>ME</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+              <tr>
+                <th>ece student</th>
+                <th>eee student</th>
+                <th>ise student</th>
+                <th>cse student</th>
+                <th>me student</th>
+                <th>civ student</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <div class="col-md-6">
-      </div>
-    </div>
-    <br>
-    <div class="row">
-      <div class="col-md-6 border">
-        <h3>Add a new Exam </h3>
-
-          <label>Exam Title</label>
-          <input type="text" name="title" id="title" class="form-control" placeholder="Please enter title . Ex. Java Exam 6th Sem CS">
-          <label>Branch</label>
-          <select class="form-control text-center" id="branch">
-            <option selected="" disabled="">-- Select Branch --</option>
-            <option value="ISE">ISE</option>
-            <option value="CSE">CSE</option>
-            <option value="EEE">EEE</option>
-            <option value="ECE">ECE</option>
-            <option value="EEE">ME</option>
-            <option value="ECE">CIV</option>
-          </select>
-          <label>Choose Semester</label>
-          <select class="form-control text-center" id="semester">
-            <option>-- Choose Semester --</option>
-            <option value="2">1</option>
-            <option value="4">2</option>
-            <option value="6">3</option>
-            <option value="8">4</option>
-            <option value="2">5</option>
-            <option value="4">6</option>
-            <option value="6">7</option>
-            <option value="8">8</option> 
-          </select>
-          <label>Choose Date</label>
-          <input type="date" name="" class="form-control" id="examDate">
-          <label>Choose Time slot</label>
-          <select class="form-control text-center" id="examTime">
-            <option selected="" disabled="">-- Time Slot --</option>
-            <option value="Batch1- 9:30AM - 12:30 PM">1- 9:30AM - 12:30 PM</option>
-            <option value="Batch2- 2:00PM - 05:00 PM">2- 2:00PM - 05:00 PM</option>
-          </select>
-          <br>
-          <input type="submit" name="uploadDetails" id="uploadDetails" value="Generate Pdf" class="btn btn-primary">
-					<br><br>
-					<label>Upload File:</label>
-					<input type="file" name="fileSubmit" class="form-control" id="fileSubmit">
-					<br>
-					<input type="submit" name="submit" value="Add Now" class="btn btn-success" id="addExam">
-
-        <br>
-      </div>
-      <div class="col-md-6 border">
-        <h2>Scheduled Exams</h2>
-        <p>Display all the upcoming exam</p>
-        <table class="table table-bordered">
-					<thead>
-						<tr>
-	            <th>Sl No</th>
-	            <th>Title of Exam</th>
-	            <th>branch</th>
-	            <th>sem</th>
-	            <th>Timing Slot</th>
-	            <th>Action</th>
-	          </tr>
-					</thead>
-					<tbody id="tableBody">
-						<!-- <tr>
-							<td>1</td>
-							<td>Java 6th Sem</td>
-							<td>CSE</td>
-							<td>6</td>
-							<td>1. 9:30 AM to 12:30PM</td>
-							<td>
-								<button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-							</td>
-						</tr> -->
-					</tbody>
-        </table>
-      </div>
-    </div>
+    </div> -->
   </div>
 </section>
 
+<a href="https://restpack.io/html2pdf/save-as-pdf?private=true" target="_blank" rel="nofollow">Save this page as PDF</a>
+<script async src="https://restpack.io/save-as-pdf.js"></script>
+
+<button id="gerneratePdf">click here</button>
 <br><br><br>
+
 
 <footer id="footer">
   <div class="container">
@@ -210,8 +153,8 @@
 
 <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase.js"></script>
 <script src="../private/api.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.62/pdfmake.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.62/vfs_fonts.js"></script>
-<script src="./add-exam1.js"></script>
+<script src="./generate-plans11.js"></script>
+
+
 </body>
 </html>

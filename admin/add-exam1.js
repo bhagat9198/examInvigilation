@@ -41,18 +41,23 @@ function data(snapshot) {
 
   var allDataArr = Object.entries(allDataObj);
   // console.log(allDataArr);
-  $('#tableBody').empty()
-  for(var i=0; i < allDataArr.length; i++) {
-    // console.log(allDataArr);
-    let title = allDataArr[i][1].title;
-    let semester = allDataArr[i][1].semester;
-    let branch = allDataArr[i][1].branch;
-    let examTime = allDataArr[i][1].examTime;
-    let examFile = allDataArr[i][1].examFile;
-    // deleteFileName = fileName;
-    // console.log(deleteFileName);
-    $('#tableBody').append('    	<tr>        <td>'+i+'</td>        <td>'+ title +'</td>        <td>'+ semester +'</td>        <td>'+ semester +'</td>        <td>'+ examTime +'</td>        <td>          <button onclick="deleteFile()" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>          <p style="display: none">'+ examFile +'</p>        </td>      </tr>'
-    );
+  if(allDataArr.length > 0) {
+    $('#tableBody').empty()
+    for(var i=0; i < allDataArr.length; i++) {
+      // console.log(allDataArr);
+      let title = allDataArr[i][1].title;
+      let semester = allDataArr[i][1].semester;
+      let branch = allDataArr[i][1].branch;
+      let examTime = allDataArr[i][1].examTime;
+      let examFile = allDataArr[i][1].examFile;
+      // deleteFileName = fileName;
+      // console.log(deleteFileName);
+      $('#tableBody').append('    	<tr>        <td>'+i+'</td>        <td>'+ title +'</td>        <td>'+ semester +'</td>        <td>'+ semester +'</td>        <td>'+ examTime +'</td>        <td>          <button onclick="deleteFile()" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>          <p style="display: none">'+ examFile +'</p>        </td>      </tr>'
+      );
+    }
+  } else {
+    $('#tableBody').empty();
+    $('#tableBody').append('<h3 class="text-center">No record Added</h3>');
   }
 }
 

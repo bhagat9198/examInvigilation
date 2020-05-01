@@ -4,10 +4,9 @@
 	<title>Generate Plan|Admin Dashboard</title>
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../fa-icons/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../fa-icons/css/font-awesome.min.css">
 </head>
 <body>
-
 <header>
   <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
 		<div class="container">
@@ -87,11 +86,62 @@
     </div> <!-- // container -->
   </nav>
 </header>
-
+  
 <br><br><br>
 
-<!-- logic code -->
+<section class="container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">
+        Admin Dashboard / Generate Seat Plans
+      </li>
+    </ol>
+  </nav>
+</section>
 
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 border">
+        <h3>Generate Seat Plan </h3>
+        <!-- <form id="generatedPlan"> -->
+          <label>Exam Title</label>
+          <input type="text" name="title" id="title" class="form-control" placeholder="Please enter title">
+          <br>
+          <label>Upload File:</label>
+          <input type="file" name="fileSubmit" class="form-control" id="fileSubmit">
+          <br>
+          <input type="submit" id="submitformData" name="submit" value="Add Now" class="btn btn-primary" id="submit">
+        <!-- </form> -->
+        <br>
+      </div>
+
+      <div class="col-md-6 border">
+        <h2>Generated Seat Plans</h2>
+        <p>Display all the generated plans</p>
+        <table id="mainTable" class="table table-bordered">
+          <tr>
+            <th>Sl No</th>
+            <th>Title</th>
+            <th>Action</th>
+          </tr>
+          <tbody id="tableBody">
+            <!-- <tr>
+              <td>1</td>
+              <td>03/03/2020</td>
+              <td>
+                <button class="btn btn-info btn-sm">   Download    <i class="fa fa-cloud-download"></i>    </button>
+                <button class="btn btn-danger btn-sm">  <i class="fa fa-trash"></i>  </button>
+              </td>
+            </tr> -->
+          </tbody>
+        </table> 
+      </div>
+    </div>
+  </div>
+</section>
+
+<br><br><br>
 
 <footer id="footer">
   <div class="container">
@@ -106,7 +156,7 @@
     </div>
   </div>
 </footer>
-
+  
 <script type="text/javascript" src="../js/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
@@ -114,5 +164,7 @@
 <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase.js"></script>
 <script src="../private/api.js"></script>
 <script src="./generate-plans1.js"></script>
+
+
 </body>
 </html>

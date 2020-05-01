@@ -31,18 +31,23 @@ function data(snapshot) {
   var allDataArr = Object.entries(allDataObj);
   // console.log(allDataArr);
 
-  for(var i=0; i < allDataArr.length; i++) {
-    let title = allDataArr[i][1].title;
-    let fileName = allDataArr[i][1].examFile;
-    // fileName1 = fileName.toString();
-    // console.log(fileName1);
-    let recordId = allDataArr[i][0];
-    // console.log(recordId);
-    downloadFileName = fileName;
-    // console.log(typeof(downloadFileName));
-    $('#tableBody').append(
-      '<tr >      <td>' + (i+1) + '</td>      <td>' + title + '</td>      <td style="color:white" >        <button id="'+ i +'1" fileData="'+ fileName +'" onclick="downloadFile()" class="btn btn-info">Download<span class="fa fa-cloud-download"></span></button> '+ fileName +'    </td>    </tr>'
-    );
+  if(allDataArr.length > 0) {
+    for(var i=0; i < allDataArr.length; i++) {
+      let title = allDataArr[i][1].title;
+      let fileName = allDataArr[i][1].examFile;
+      // fileName1 = fileName.toString();
+      // console.log(fileName1);
+      let recordId = allDataArr[i][0];
+      // console.log(recordId);
+      downloadFileName = fileName;
+      // console.log(typeof(downloadFileName));
+      $('#tableBody').append(
+        '<tr >      <td>' + (i+1) + '</td>      <td>' + title + '</td>      <td style="color:white" >        <button id="'+ i +'1" fileData="'+ fileName +'" onclick="downloadFile()" class="btn btn-info">Download<span class="fa fa-cloud-download"></span></button> '+ fileName +'    </td>    </tr>'
+      );
+    }
+  } else {
+    $('#tableBody').empty();
+    $('#tableBody').append('<h3 class="text-center">No record Added</h3>');
   }
 }
 

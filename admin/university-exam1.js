@@ -42,15 +42,21 @@ function data(snapshot) {
 
   var allDataArr = Object.entries(allDataObj);
   // console.log(allDataArr);
-  $('#tableBody').empty()
-  for(var i=0; i < allDataArr.length; i++) {
-    // console.log(allDataArr);
-    let branch = allDataArr[i][1].title;
-    let fileName = allDataArr[i][1].fileUploaded;
-    // deleteFileName = fileName;
-    // console.log(deleteFileName);
-    $('#tableBody').append('<tr>        <td>'+ branch +'</td>         <td>            <button  onclick="deleteFile()" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button> <p style="display:none">'+ fileName +'</p>       </td>      </tr>'
-    );
+
+  if(allDataArr.length > 0) {
+    $('#tableBody').empty()
+    for(var i=0; i < allDataArr.length; i++) {
+      // console.log(allDataArr);
+      let branch = allDataArr[i][1].title;
+      let fileName = allDataArr[i][1].fileUploaded;
+      // deleteFileName = fileName;
+      // console.log(deleteFileName);
+      $('#tableBody').append('<tr>        <td>'+ branch +'</td>         <td>            <button  onclick="deleteFile()" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button> <p style="display:none">'+ fileName +'</p>       </td>      </tr>'
+      );
+    }
+  } else {
+    $('#tableBody').empty();
+    $('#tableBody').append('<h3 class="text-center">No record Added</h3>');
   }
 }
 
