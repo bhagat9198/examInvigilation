@@ -1,11 +1,11 @@
 // const auth = firebase.auth();
 
 // dupliacting the database
-const dupStudent  = firebase.database().ref('dupStudent');
-const dupFaculty  = firebase.database().ref('dupFaculty');
+const dupStudent  = firebase.database().ref('addStudent');
+const dupFaculty  = firebase.database().ref('addFaculty');
 
 function generatingStudents(b) {
-	for(var i = 1; i <= 5; i++) {
+	for(var i = 1; i <= 40; i++) {
 		var branchGenerate = b;
 		const dupStudentPush = dupStudent.push();
 		// const key = dupStudentPush.getKey();
@@ -17,21 +17,31 @@ function generatingStudents(b) {
 		const password = `ssssss`;
 		const semester = '4';
     
-    auth.createUserWithEmailAndPassword(email, password).then(cred => {
-      const wholeData = {
-        name: name,
-        branch: branch,
-        email: email,
-        usn: usn,
-        password: password,
-        semester: semester
-      };
-      dupStudentPush.set(wholeData);
-    }).then(() => {
-      console.log('done');
-    }).catch(err => {
-      console.log(err);
-    });
+    // auth.createUserWithEmailAndPassword(email, password).then(cred => {
+    //   const wholeData = {
+    //     name: name,
+    //     branch: branch,
+    //     email: email,
+    //     usn: usn,
+    //     password: password,
+    //     semester: semester
+    //   };
+    //   dupStudentPush.set(wholeData);
+    // }).then(() => {
+    //   console.log('done');
+    // }).catch(err => {
+    //   console.log(err);
+		// });
+		const wholeData = {
+			name: name,
+			branch: branch,
+			email: email,
+			usn: usn,
+			password: password,
+			semester: semester
+		};
+		dupStudentPush.set(wholeData);
+		console.log(`${branch} done`);
 	}
 }
 // generatingStudents('ise');
@@ -50,19 +60,26 @@ function generatingFaculty() {
 		const password = `ffffff`;
 		
 		
-		auth.createUserWithEmailAndPassword(email, password).then(cred => {
-      const wholeData = {
-				name: name,
-				email: email,
-				password: password,
-			};
-      dupFacultyPush.set(wholeData);
-    }).then(() => {
-      console.log(`faculty done`);
-    }).catch(err => {
-      console.log(err);
-    });
+		// auth.createUserWithEmailAndPassword(email, password).then(cred => {
+    //   const wholeData = {
+		// 		name: name,
+		// 		email: email,
+		// 		password: password,
+		// 	};
+    //   dupFacultyPush.set(wholeData);
+    // }).then(() => {
+    //   console.log(`faculty done`);
+    // }).catch(err => {
+    //   console.log(err);
+		// });
+		
+		const wholeData = {
+			name: name,
+			email: email,
+			password: password,
+		};
+		dupFacultyPush.set(wholeData);
+		console.log(`faculty done`);
 	} 
 }
 // generatingFaculty();
-

@@ -92,6 +92,7 @@ function upadateRecord() {
     var matchField2 = allDataObj[k].semester;
     var matchField3 = allDataObj[k].branch;
     var matchField4 = allDataObj[k].usn;
+    var matchField5 = allDataObj[k].email;
     // console.log(matchField1, matchField2, matchField3, matchField4);
 
     if((field1 == matchField1) && (field2 == matchField2) && (field3 == matchField3) && (field4 == matchField4) ) {
@@ -99,13 +100,13 @@ function upadateRecord() {
       semester = document.querySelector('#semester').value;
       branch = document.querySelector('#branch').value;
       usn = document.querySelector('#usn').value;
-      email = document.querySelector('#email').value;
+      // email = document.querySelector('#email').value;
       updatedData = {
         name : name,
         semester : semester,
         branch : branch,
         usn : usn,
-        email : email
+        email : matchField5
       };
       allStudentRef.child(k).update(updatedData);
       // console.log("Record Updated");

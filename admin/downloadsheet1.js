@@ -1,6 +1,6 @@
 
-const dupStudent  = firebase.database().ref('dupStudent');
-const dupFaculty  = firebase.database().ref('dupFaculty');
+const dupStudent  = firebase.database().ref('addStudent');
+const dupFaculty  = firebase.database().ref('addFaculty');
 let facultyObj, facultyKeys;
 let rooms = [];
 
@@ -56,15 +56,15 @@ function dupStudentData(snapshot) {
 			meKeys.push(ele);
 		}
 	});
-	// console.log(iseKeys.length);
-	// console.log(cseKeys.length);
-	// console.log(eceKeys.length);
-	// console.log(eeeKeys.length);
-	// console.log(civKeys.length);
-	// console.log(meKeys.length);
+	console.log(iseKeys.length);
+	console.log(cseKeys.length);
+	console.log(eceKeys.length);
+	console.log(eeeKeys.length);
+	console.log(civKeys.length);
+	console.log(meKeys.length);
 
 	setTimeout(()=>{
-		// console.log(totalDupStudent);
+		console.log(totalDupStudent);
 		cal(dataObj, totalDupStudent, iseKeys, cseKeys, eceKeys, eeeKeys, meKeys, civKeys);
 	},3000);
 }
@@ -116,7 +116,7 @@ function cal(dataObj, totalDupStudent, iseKeys, cseKeys, eceKeys, eeeKeys, meKey
 		mostStudents = calMostStudents(cseKeys, eceKeys, eeeKeys, iseKeys, meKeys, civKeys);
 		// console.log(mostStudents);
 	}
-	// console.log(mostStudents);
+	console.log(mostStudents);
 
 
 	let allTabels = '';

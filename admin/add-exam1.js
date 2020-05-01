@@ -42,7 +42,10 @@ function data(snapshot) {
   var allDataArr = Object.entries(allDataObj);
   // console.log(allDataArr);
   if(allDataArr.length > 0) {
+    console.log(allDataArr.length);
+    
     $('#tableBody').empty()
+    let j = 1;
     for(var i=0; i < allDataArr.length; i++) {
       // console.log(allDataArr);
       let title = allDataArr[i][1].title;
@@ -52,8 +55,9 @@ function data(snapshot) {
       let examFile = allDataArr[i][1].examFile;
       // deleteFileName = fileName;
       // console.log(deleteFileName);
-      $('#tableBody').append('    	<tr>        <td>'+i+'</td>        <td>'+ title +'</td>        <td>'+ semester +'</td>        <td>'+ semester +'</td>        <td>'+ examTime +'</td>        <td>          <button onclick="deleteFile()" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>          <p style="display: none">'+ examFile +'</p>        </td>      </tr>'
+      $('#tableBody').append('    	<tr>        <td>'+j+'</td>        <td>'+ title +'</td>        <td>'+ semester +'</td>        <td>'+ semester +'</td>        <td>'+ examTime +'</td>        <td>          <button onclick="deleteFile()" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>          <p style="display: none">'+ examFile +'</p>        </td>      </tr>'
       );
+      j++;
     }
   } else {
     $('#tableBody').empty();
