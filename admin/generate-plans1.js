@@ -40,21 +40,27 @@ function data(snapshot) {
 
   var allDataArr = Object.entries(allDataObj);
   // console.log(allDataArr);
-  let j = 0;
-  $('#tableBody').empty()
-  for(var i=0; i < allDataArr.length; i++) {
-    // console.log(allDataArr);
-    let docId = allDataArr[i][0];
-    // console.log(docId);
-    
-    let title = allDataArr[i][1].title;
-    let seatPlanFile = allDataArr[i][1].seatPlanFile
-    // console.log(seatPlanFile);
-    
-    j++;
-    $('#tableBody').append('<tr>    <td>'+ j + '</td>    <td>'+ title +'</td>    <td>      <button onclick="tableValues(); downloadFile()" class="btn btn-info btn-sm">   Download    <i class="fa fa-cloud-download"></i>    </button>     <button onclick="tableValues(); deleteFile()" class="btn btn-danger btn-sm">  <i class="fa fa-trash"></i>  </button> <p style="display:none">'+ seatPlanFile +'</td>  </tr>'
-    );
+  if(allDataArr.length > 0) {
+    let j = 0;
+    $('#tableBody').empty()
+    for(var i=0; i < allDataArr.length; i++) {
+      // console.log(allDataArr);
+      let docId = allDataArr[i][0];
+      // console.log(docId);
+      
+      let title = allDataArr[i][1].title;
+      let seatPlanFile = allDataArr[i][1].seatPlanFile
+      // console.log(seatPlanFile);
+      
+      j++;
+      $('#tableBody').append('<tr>    <td>'+ j + '</td>    <td>'+ title +'</td>    <td>      <button onclick="tableValues(); downloadFile()" class="btn btn-info btn-sm">   Download    <i class="fa fa-cloud-download"></i>    </button>     <button onclick="tableValues(); deleteFile()" class="btn btn-danger btn-sm">  <i class="fa fa-trash"></i>  </button> <p style="display:none">'+ seatPlanFile +'</td>  </tr>'
+      );
+    }
+  } else {
+    $('#tableBody').empty();
+    $('#tableBody').append('<h3 class="text-center">No Record Added</h3>');
   }
+  
 }
 
 function error(err) {

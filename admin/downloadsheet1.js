@@ -12,6 +12,8 @@ function dupFacultyError(err) {
 
 function dupFacultyData(snapshot) {
 	facultyObj = snapshot.val();
+	// console.log(facultyObj);
+	
 	facultyKeys = Object.keys(facultyObj);
 }
 
@@ -24,9 +26,13 @@ function dupStudentError(err) {
 // let totalDupStudent;
 function dupStudentData(snapshot) {
 	const dataObj = snapshot.val();
+	// console.log(dataObj);
+	
 	const dataArrKeys  = Object.keys(dataObj);
 	// console.log(dataArr);
 	let totalDupStudent = dataArrKeys.length;
+	// console.log(totalDupStudent);
+	
 	let iseKeys = [], cseKeys = [], eceKeys = [], eeeKeys = [], civKeys = [], meKeys = [];
 	
 	dataArrKeys.forEach(ele => {
@@ -51,6 +57,11 @@ function dupStudentData(snapshot) {
 		}
 	});
 	// console.log(iseKeys.length);
+	// console.log(cseKeys.length);
+	// console.log(eceKeys.length);
+	// console.log(eeeKeys.length);
+	// console.log(civKeys.length);
+	// console.log(meKeys.length);
 
 	setTimeout(()=>{
 		// console.log(totalDupStudent);
@@ -83,16 +94,28 @@ function cal(dataObj, totalDupStudent, iseKeys, cseKeys, eceKeys, eeeKeys, meKey
 	let allRows = '', rowHtml = '';
 	let mostStudents = 0;
 	mostStudents = calMostStudents(cseKeys, eceKeys, eeeKeys, meKeys, civKeys, iseKeys);
-	if(mostStudents < 0)
+	// console.log(mostStudents);
+	
+	if(mostStudents < 0) {
 		mostStudents = calMostStudents(iseKeys, eceKeys, eeeKeys, meKeys, civKeys, cseKeys);
-	else if(mostStudents < 0)
+		// console.log(mostStudents);
+	}
+	if(mostStudents < 0) {
+		// console.log(mostStudents);
 		mostStudents = calMostStudents(cseKeys, iseKeys, eeeKeys, meKeys, civKeys, eceKeys);
-	else if(mostStudents < 0)
+	}
+	if(mostStudents < 0) {
 		mostStudents = calMostStudents(cseKeys, eceKeys, iseKeys, meKeys, civKeys, eeeKeys);
-	else if(mostStudents < 0)
+		// console.log(mostStudents);
+	}
+	if(mostStudents < 0) {
 		mostStudents = calMostStudents(cseKeys, eceKeys, eeeKeys, iseKeys, civKeys, meKeys);
-	else 
-		mostStudents = civKeys.length;
+		// console.log(mostStudents);
+	} 
+	if(mostStudents < 0) {
+		mostStudents = calMostStudents(cseKeys, eceKeys, eeeKeys, iseKeys, meKeys, civKeys);
+		// console.log(mostStudents);
+	}
 	// console.log(mostStudents);
 
 
@@ -101,9 +124,11 @@ function cal(dataObj, totalDupStudent, iseKeys, cseKeys, eceKeys, eeeKeys, meKey
 	let multipler = 1, counter = 0, facultyCount = facultyKeys.length, roomCount = 30;
 	let tempFacutyKeys = facultyKeys;
 	let tempRooms = rooms;
+	// console.log(totalDupStudent);
+	
 	while(totalDupStudent >= 0) {
+		
 		for(let i = counter; i < mostStudents; i++) {
-			// console.log(i);
 			
 			if(i == 5*multipler){
 				multipler++;

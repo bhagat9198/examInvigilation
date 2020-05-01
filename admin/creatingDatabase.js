@@ -38,7 +38,7 @@ function generatingStudents(b) {
 // generatingStudents('cse');
 // generatingStudents('ece');
 // generatingStudents('eee');
-generatingStudents('civ');
+// generatingStudents('civ');
 // generatingStudents('me');
 
 
@@ -49,13 +49,19 @@ function generatingFaculty() {
 		const email = `f${i}@f.com`;
 		const password = `ffffff`;
 		
-		const wholeData = {
-			name: name,
-			email: email,
-			password: password,
-		};
-		dupFacultyPush.set(wholeData);
-		console.log(`faculty done`);
+		
+		auth.createUserWithEmailAndPassword(email, password).then(cred => {
+      const wholeData = {
+				name: name,
+				email: email,
+				password: password,
+			};
+      dupFacultyPush.set(wholeData);
+    }).then(() => {
+      console.log(`faculty done`);
+    }).catch(err => {
+      console.log(err);
+    });
 	} 
 }
 // generatingFaculty();

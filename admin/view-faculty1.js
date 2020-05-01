@@ -18,14 +18,19 @@ auth.onAuthStateChanged(user => {
       var allDataArr = Object.entries(allDataObj);
       // console.log(allDataArr);
 
-      $('#tableBody').empty();
-      for(var i=0; i < allDataArr.length; i++) {
-        let name = allDataArr[i][1].name;
-        let email = allDataArr[i][1].email;
+      if(allDataArr.length > 0) {
+        $('#tableBody').empty();
+        for(var i=0; i < allDataArr.length; i++) {
+          let name = allDataArr[i][1].name;
+          let email = allDataArr[i][1].email;
 
-        $('#tableBody').append(
-          '<tr>      <td>' + name + '</td>      <td>' + email + '</td>      <td>        <button class="btn btn-danger btn-sm"  onclick="tableValues(); deleteRecord()">          <i class="fa fa-trash"></i>        </button>        <button class="btn btn-sm btn-info" class="btn btn-info btn-lg" onclick="tableValues()" data-toggle="modal" data-target="#myModal"><i class="fa fa-wrench"></i></button>      </td>    </tr>'
-        );
+          $('#tableBody').append(
+            '<tr>      <td>' + name + '</td>      <td>' + email + '</td>      <td>        <button class="btn btn-danger btn-sm"  onclick="tableValues(); deleteRecord()">          <i class="fa fa-trash"></i>        </button>        <button class="btn btn-sm btn-info" class="btn btn-info btn-lg" onclick="tableValues()" data-toggle="modal" data-target="#myModal"><i class="fa fa-wrench"></i></button>      </td>    </tr>'
+          );
+        }
+      } else {
+        $('#tableBody').empty();
+        $('#tableBody').append('<h3 class="text-center">No record Added</h3>');
       }
     }
 
