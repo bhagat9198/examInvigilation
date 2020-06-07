@@ -30,7 +30,7 @@ function dataExam(snapshot) {
   const allDataObj = snapshot.val();
   const allDataArr = Object.entries(allDataObj);
   const totalExam = allDataArr.length;
-  // console.log(totalExam);
+  console.log(totalExam);
   document.getElementById('totalExams').innerHTML = totalExam;
 }
 
@@ -38,7 +38,7 @@ function dataFacu(snapshot) {
   const allDataObj = snapshot.val();
   const allDataArr = Object.entries(allDataObj);
   const totalFacu = allDataArr.length;
-  // console.log(totalFacu);
+  console.log(totalFacu);
   document.getElementById('totalFaculties').innerHTML = totalFacu;
 }
 
@@ -46,7 +46,7 @@ function dataStud(snapshot) {
   const allDataObj = snapshot.val();
   const allDataArr = Object.entries(allDataObj);
   const totalStud = allDataArr.length;
-  // console.log(totalStud);
+  console.log(totalStud);
   document.getElementById('totalStudents').innerHTML = totalStud;
 }
 
