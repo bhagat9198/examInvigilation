@@ -2,6 +2,7 @@ const auth = firebase.auth();
 
 var addFaculty = document.getElementById('addFaculty');
 
+
 auth.onAuthStateChanged(user => {
   if(user) {
     // console.log(user);
@@ -31,7 +32,10 @@ function submitForm(e) {
   auth.createUserWithEmailAndPassword(email, password).then(cred => {
     // saving values in firebase
     // making the reffernce
-    var addFacultyRef = firebase.database().ref('addFaculty');
+
+    // var addFacultyRef = firebase.database().ref('addFaculty');
+    // changing the db ref
+    var addFacultyRef = firebase.database().ref('dupFaculty');
     // data to be saved
     const data = {
       name:name,

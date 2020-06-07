@@ -1,8 +1,8 @@
 // const auth = firebase.auth();
 
 // dupliacting the database
-const dupStudent  = firebase.database().ref('addStudent');
-const dupFaculty  = firebase.database().ref('addFaculty');
+// const dupStudent  = firebase.database().ref('dupStudent');
+// const dupFaculty  = firebase.database().ref('dupFaculty');
 
 function generatingStudents(b) {
 	for(var i = 1; i <= 40; i++) {
@@ -10,12 +10,13 @@ function generatingStudents(b) {
 		const dupStudentPush = dupStudent.push();
 		// const key = dupStudentPush.getKey();
 		// console.log(key);
-		const name = `s${i}${branchGenerate}`;
+		const name = `ss${i}${branchGenerate}`;
 		const branch = `${branchGenerate}`.toUpperCase();
-		const email = `s${i}@${branchGenerate}.com`;
-		const usn = `s${i}${branchGenerate}`;
+		const email = `ss${i}@${branchGenerate}.com`;
+		const usn = `ss${i}${branchGenerate}`;
 		const password = `ssssss`;
-		const semester = '4';
+		let r = Math.ceil(Math.random()*(8-0)+0)
+		const semester = r;
     
     // auth.createUserWithEmailAndPassword(email, password).then(cred => {
     //   const wholeData = {
@@ -52,11 +53,13 @@ function generatingStudents(b) {
 // generatingStudents('me');
 
 
+
+
 function generatingFaculty() {
 	for(var i = 1; i <= 20; i++) {
 		const dupFacultyPush = dupFaculty.push();
-		const name = `f${i}`;
-		const email = `f${i}@f.com`;
+		const name = `ff${i}`;
+		const email = `ff${i}@f.com`;
 		const password = `ffffff`;
 		
 		
