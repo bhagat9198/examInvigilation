@@ -10,25 +10,34 @@ const updateAdminForm = document.querySelector('#updateAdminForm');
 
 updateAdminForm.addEventListener('submit', function(e) {
   e.preventDefault();
-  const updateAdminPassword = updateAdminForm.querySelector('#updateAdminPassword').value;
+  
+  const updateAdminOldPassword = updateAdminForm.querySelector('#updateAdminOldPassword').value;
   // console.log(updatePass);
-
-  const cuser = firebase.auth().currentUser;
-  cuser.updatePassword(updateAdminPassword).then(function() {
+  const cadminEmail = updateAdminForm.querySelector('#adminEmail').textContent;
+  
+  auth.signInWithEmailAndPassword(cadminEmail, updateAdminOldPassword).then((cred) => {
+    console.log(cadminEmail, updateAdminOldPassword);
+    
+    const updateAdminPassword = updateAdminForm.querySelector('#updateAdminPassword').value;
+    const cuser = firebase.auth().currentUser;
+    return cuser.updatePassword(updateAdminPassword)
+  })
+  .then( updateAdminPassword => {
+    console.log(updateAdminPassword);
+    
     // Update successful.
     const htmlTxt = `<p>Successfuly password reset</p>`;
     updateAdminForm.querySelector('#alert').innerHTML = htmlTxt;
     updateAdminForm.querySelector('#alert').style.display = 'block';
     updateAdminForm.querySelector('#alert').style.color = 'green';
     console.log('updating done');
-    
-  }).catch(function(error) {
+  }) 
+  .catch(function(error) {
     const htmlTxt = ` <p>${error.message}</p> `;
     updateAdminForm.querySelector('#alert').innerHTML = htmlTxt;
     updateAdminForm.querySelector('#alert').style.display = 'block';
     updateAdminForm.querySelector('#alert').style.color = 'red';
   });
-
 });
 
 // listen for auth status changes

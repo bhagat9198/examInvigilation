@@ -68,7 +68,6 @@ const displayingAdmins = (data) => {
       <tr>
         <td>${i}</td>
         <td>${admin.name}</td>
-        <td><button class="btn btn-danger">Delete <span class="fa fa-trash"></span></button></td>
       </tr>
       `;
       html += tr;

@@ -1,5 +1,5 @@
 const auth = firebase.auth();
-const allFacultyRef = firebase.database().ref('addFaculty');
+const allFacultyRef = firebase.database().ref('dupFaculty');
 const updatePassSubmit = document.querySelector('#updatePassSubmit');
 const updateForm = document.querySelector('#updateForm');
 let email;
@@ -24,11 +24,15 @@ auth.onAuthStateChanged(user => {
 
 updateForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  const updatePass = updateForm.querySelector('#updatedUserPassword').value;
+  const oldPass = updateForm.querySelector('#updatedUserOldPassword').value;
   // console.log(updatePass);
 
-  const cuser = firebase.auth().currentUser;
-  cuser.updatePassword(updatePass).then(function() {
+  auth.signInWithEmailAndPassword(email, oldPass).then((cred) => {
+    console.log(email, oldPass);
+    const cuser = firebase.auth().currentUser;
+    const updatePass = updateForm.querySelector('#updatedUserPassword').value;
+    return cuser.updatePassword(updatePass);
+  }).then(() => {
     // Update successful.
     const htmlTxt = `<p>Successfuly password reset</p>`;
     document.querySelector('#alert').innerHTML = htmlTxt;

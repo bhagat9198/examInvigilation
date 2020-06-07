@@ -151,11 +151,12 @@ function data(snapshot) {
       let recordId = allDataArr[i][0];
       // console.log(recordId);
       let facultyRequire = allDataArr[i][1].facultyRequire;
+      let examTitle = allDataArr[i][1].title;
       let examTime = allDataArr[i][1].examTime;
       let examDate = allDataArr[i][1].examDate;
       // deleteFileName = fileName;
       // console.log(deleteFileName);
-      $('#examTableBody').append('<tr>      <td>'+ j +'</td>      <td>'+ examDate +'</td>      <td>'+ examTime +'</td></tr>'
+      $('#examTableBody').append('<tr>      <td>'+ j +'</td><td>'+examTitle+'</td>      <td>'+ examDate +'</td>      <td>'+ examTime +'</td></tr>'
       );
       j++;
     }

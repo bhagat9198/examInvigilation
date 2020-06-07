@@ -30,7 +30,9 @@ function submitForm(e) {
 
   auth.createUserWithEmailAndPassword(email, password).then(cred => {
     // saving values in firebase
-    var addStudentRef = firebase.database().ref('addStudent');
+    // var addStudentRef = firebase.database().ref('addStudent');
+    // changing the db
+    var addStudentRef = firebase.database().ref('dupStudent');
     const data = {
       name: name,
       branch: branch,
