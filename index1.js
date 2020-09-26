@@ -20,19 +20,20 @@ adminLoginForm.addEventListener('submit', (e) => {
   // console.log(email, password);
   // log the user in
   const adminAlert = document.querySelector('#adminAlert');
-  auth.signInWithEmailAndPassword(email, password).then((cred) => {
-    const html = `<p>Login Successful</p>`;
-    adminAlert.innerHTML = html;
-    adminAlert.style.display = 'block';
-    adminAlert.style.color = 'green';
-    adminLoginForm.reset();
-    location = './admin/home.html';
-  }).catch(err => {
-    const html = `<p>Login Failed <br> ${err.message}</p>`;
-    adminAlert.innerHTML = html;
-    adminAlert.style.display = 'block';
-    adminAlert.style.color = 'red';
-  });
+  location = './admin/home.html';
+  // auth.signInWithEmailAndPassword(email, password).then((cred) => {
+  //   const html = `<p>Login Successful</p>`;
+  //   adminAlert.innerHTML = html;
+  //   adminAlert.style.display = 'block';
+  //   adminAlert.style.color = 'green';
+  //   adminLoginForm.reset();
+  //   location = './admin/home.html';
+  // }).catch(err => {
+  //   const html = `<p>Login Failed <br> ${err.message}</p>`;
+  //   adminAlert.innerHTML = html;
+  //   adminAlert.style.display = 'block';
+  //   adminAlert.style.color = 'red';
+  // });
 });
 
 // login admin
